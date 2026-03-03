@@ -71,8 +71,6 @@ Scan Event Logging
 - PostgreSQL
 - Redis
 - Docker
-- RESTful API Design
-- OpenAPI / Swagger
 
 ---
 

@@ -45,7 +45,13 @@ public class Member{
     @Column(unique = true) // Safeguard, no two people can have same nfcTagId.
     private String nfcTagId;
 
-    private String fullName;
-    private boolean active = true;
+    private String firstName;
+    private String lastName;
+    private int membershipTenure; // in years
+    private boolean hasExecutiveMembership = false;
+    private boolean businessMembership = false;
+    private boolean membershipActive = true;
+    private boolean membershipExpiresSoon = false;
+    private boolean banned = false;
     private LocalDateTime lastScan;
 }

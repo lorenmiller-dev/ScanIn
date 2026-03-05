@@ -19,7 +19,16 @@ repositories {
 }
 
 dependencies {
+	// springboot
 	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	// lombok
+	implementation("org.projectlombok:lombok:1.18.42")
+
+	// PostgreSQL
+	implementation 'org.postgresql:postgresql'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }

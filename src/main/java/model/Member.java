@@ -47,11 +47,21 @@ public class Member{
 
     private String firstName;
     private String lastName;
-    private int membershipTenure; // in years
-    private boolean hasExecutiveMembership = false;
-    private boolean businessMembership = false;
-    private boolean membershipActive = true;
-    private boolean membershipExpiresSoon = false;
-    private boolean banned = false;
-    private LocalDateTime lastScan;
+    private String tier = "GOLD";
+    private int tenureInYears;
+
+    // naming booleans
+    @Column(name = "is_active")
+    private boolean isActive = true;
+
+    @Column(name = "is_expiring_soon")
+    private boolean isExpiringSoon = false;
+
+    @Column(name = "is_business_account")
+    private boolean isBusinessAccount = false;
+
+    @Column(name = "is_banned")
+    private boolean isBanned = false;
+
+    private LocalDateTime lastScanAt;
 }

@@ -2,3 +2,17 @@ spring:
   application:
     name: TapIn
 
+  # Database Connection Settings
+  datasource:
+    url: jdbc:postgresql://localhost:5432/tap_in
+    username: postgres
+    password: Sggfge44!
+
+  # Hibernate / JPA Settings
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true

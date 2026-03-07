@@ -27,7 +27,7 @@ dependencies {
 	implementation("org.projectlombok:lombok:1.18.42")
 
 	// PostgreSQL
-	implementation 'org.postgresql:postgresql'
+	runtimeOnly 'org.postgresql:postgresql'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'

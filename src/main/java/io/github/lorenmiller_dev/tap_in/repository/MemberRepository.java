@@ -1,6 +1,6 @@
-package repository;
+package io.github.lorenmiller_dev.tap_in.repository;
 
-import model.Member;
+import io.github.lorenmiller_dev.tap_in.model.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

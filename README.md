@@ -78,41 +78,36 @@ Scan Event Logging
 
 ### Members Table
 
-- id 
 - nfc_token_id
 - first_name
 - last_name
-- membership_status
-- membership_tier
-- created_at
-
-### Tap_Logs Table
-
-- id
-- member_id 
-- scanner_id
-- timestamp
-- result (SUCCESS / DENIED)
+- status
+- type
+- created_at <- not implemented yet
+- last_scan_at
 
 ---
 
 ## API Endpoints
 
-### POST /tap
+### POST Tap
 
 Processes an NFC tap event.
 
 **Request**
 ```json
+/api/members/tap/{nfc_tag_id}}
+
 {
-  "nfc_token_id": "A1B2C3D4",
-  "scanner_id": "ENTRANCE_01"
+  "nfc_tag_id": "TEST-123",
+  "scanner_id": "WAREHOUSE_XX_SCANNER_01" // not implemented yet 
 }
 
 Response
 
 {
-  "name": "John Smith",
-  "membership_tier": "Gold",
-  "status": "Active"
+  "firstName": "John",
+  "type": "GOLD",
+  "status": "Active",
+  "last_scan_at": "2026-03-09 23:10:40"
 }

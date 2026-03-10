@@ -29,7 +29,8 @@ public class DataInitializer implements CommandLineRunner {
     public void run(String... args) throws Exception {
         try {
             if (memberRepository.count() == 0) {
-                System.out.println("Database currently has " + memberRepository.count() + " members. Loading test members...");
+                System.out.println("Database currently has " +
+                        memberRepository.count() + " members. Loading test members...");
 
                 // create valid active member
                 Member john = new Member();
@@ -60,7 +61,7 @@ public class DataInitializer implements CommandLineRunner {
                 memberRepository.save(loren);
 
                 // success print statement
-                System.out.println("Successfully saved 3 test members to database");
+                System.out.println("Successfully saved " + memberRepository.count() + " test members to database");
                 System.out.println("✅ Successfully saved test members");
             }
         } catch (Exception e) {

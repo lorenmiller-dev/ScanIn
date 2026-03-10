@@ -42,7 +42,9 @@ public class MemberService {
         memberRepository.save(member);
         // print welcome message
         return switch (memberOpt.get().getMembership().getStatus()) {
-            case ACTIVE -> "Welcome " + memberOpt.get().getFirstName() + ", Membership Type: " + memberOpt.get().getMembership().getType() + ", Tenure: " + memberOpt.get().getTenureInYears() + " years.";
+            case ACTIVE -> "Welcome " + memberOpt.get().getFirstName() + ", Membership Type: "
+                    + memberOpt.get().getMembership().getType() + ", Tenure: "
+                    + memberOpt.get().getTenureInYears() + " years.";
             case EXPIRED ->  memberOpt.get().getFirstName() + "'s membership has expired.";
             case EXPIRING_SOON ->   memberOpt.get().getFirstName() + "'s membership is expiring soon.";
             case BANNED ->   memberOpt.get().getFirstName() + " is banned. Alert a Supervisor or Manager!";
